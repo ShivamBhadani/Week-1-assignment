@@ -8,6 +8,19 @@
 */
 
 function isAnagram(str1, str2) {
+  if(str1.length!=str2.length){
+    return false;
+  }
+  const freq1={};
+  const freq2={};
+  for(int i=0;i<str1.length;i++){
+    freq1[str1[i]]++;
+    freq2[str2[i]]++;
+  }
+  if(freq1===freq2){
+    return true;
+  }
+  return false;
 
 }
 
